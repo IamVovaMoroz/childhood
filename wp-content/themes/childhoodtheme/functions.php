@@ -1,5 +1,5 @@
 <?php
-// 'childhood_scripts' - название функции отслеживает как функции так и скрипты
+// 'childhood_scripts' - название функции отслеживает как функции так и скрипты. //
  add_action('wp_enqueue_scripts', 'childhood_scripts');
 
  function childhood_scripts() {
