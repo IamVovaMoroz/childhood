@@ -746,7 +746,7 @@
         </footer>
 
         <?php wp_footer(  ) ?>
-    <script src="./js/main.min.js" defer></script>
+    <!-- <script src="./js/main.min.js" defer></script> -->
 
     </body>
 </html>
