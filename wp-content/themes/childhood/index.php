@@ -502,4 +502,74 @@
             </div>
         </div>
 
+      
         <?php get_footer(); ?>
+       
+
+        <!-- ---------------------------------------------------------------------------------------------- -->
+
+          <!-- exapmle hook action -->
+
+        <?php
+        function print_hello($text, $name) 
+        {echo "hello my friend" . $text . ' ' . $name;
+        } 
+
+        // function print_hello_1() 
+        // {echo "hello my friend1<br>";} 
+        // function print_hello_2() 
+        // {echo "hello my friend2<br>";} 
+        //  add_action('my_hook', 'print_hello', 15); => my_hook -random name, which function to start print_hello... 5, 10, 15 - Priority, where the value is greater will be exucuted later. First 5.. default 10
+        add_action('my_hook', 'print_hello', 10, 2);
+        // add_action('my_hook', 'print_hello_1', 10);
+        // add_action('my_hook', 'print_hello_2', 5);
+// start do action, then will start add_action, which show 'hello my friend'
+        // do_action('my_hook');
+
+        do_action('my_hook', 'dear customer', 'Ivan');
+
+        function my_filter_function($str){
+            return 'Hello' . $str;
+           }
+        
+           add_filter('my_filter', 'my_filter_function');
+        
+           echo apply_filters( 'my_filter', 'World' );
+// from my hook 'my_filter' i removed my_filter_function
+           remove_filter('my_filter', 'my_filter_function');
+// here we willshoe just 'World'
+           echo apply_filters( 'my_filter', 'World' );
+
+        //    -------------------- filter what we will use
+
+        // nav_menu_link_attributes -standart for changing atr  <a> (title, target, rel, href). filter_nav_menu_link_attributes - my filter wit priorities
+//         add_filter('nav_menu_link_attributes', 'filter_nav_menu_link_attributes', 10 , 3);
+// // $atts, $item, $args - 3 args standart
+//         function filter_nav_menu_link_attributes($atts, $item, $args) {
+//             // if menu has "Main" all attributes class ($atts) + add class header__nav-item
+//             if ($args->menu === "Main") {
+//                 $atts['class'] .= ' header__nav-item';
+//             }
+//         // if we have menu and it is a current page(where I am now) I want to see my active link. I take class from that link and add ' header__nav-item-active'
+//             if ($item->current) {
+//                 $atts['class'] .= ' header__nav-item-active';
+//             }
+        
+//             // if we have some special categories we add ' header__nav-item-active'
+//             if ($item->ID === 106 && (in_category('soft_toys', $item->object_id) || in_category('edu_toys', $item->object_id))) {
+//                 $atts['class'] .= ' header__nav-item-active';
+//             }
+//         // in the end we will return $atts attributes
+//             return $atts;
+//         }
+        
+
+        ?>
+
+        <!-- ---------------------------------------------------------------------------------------- -->
+     <!-- exapmle hook filter -->
+     
+
+ 
+
+

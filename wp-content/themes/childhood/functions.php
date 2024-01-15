@@ -1,5 +1,5 @@
 <?php
-// 'childhood_scripts' - название функции отслеживает как функции так и скрипты. //
+// 'childhood_scripts' - название функции отслеживает как функции так и скрипты. wp_enqueue_scripts - when scripts start working we run our custom scripts childhood_scripts//
  add_action('wp_enqueue_scripts', 'childhood_scripts');
 
  function childhood_scripts() {
@@ -7,8 +7,9 @@
     // ПОДКЛЮЧАЕМ СТИЛИ
 
     // function add styles 1) 1st argument how we call file with styles 'childhood-style', 2) 2 argument get_stylesheet_uri(  ) for find main style.css without write the path to this file with styles
-    // wp_enqueue_style('childhood-style', get_stylesheet_uri(  ));
-    wp_enqueue_style('childhood-style', get_template_directory_uri() . '/style.css');
+    wp_enqueue_style('childhood-style', get_stylesheet_uri(  ));
+    // same as the code above
+    // wp_enqueue_style('childhood-style', get_template_directory_uri() . '/style.css');
 
 // => if I want to add new other style we need to add the path to this file. get_template_directory_uri() help us to add path to file + . concat + our way
     // wp_enqueue_style('h1-style', get_template_directory_uri() . "/assets/styles/main.min.css");
