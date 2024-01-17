@@ -67,6 +67,7 @@
             </div>
         </div>
 
+
         <div class="about" id="about">
             <div class="container">
                 <div class="row">
@@ -90,6 +91,7 @@
                 </div>
             </div>
         </div>
+
         <div class="specialists" id="specialists">
             <div class="container">
                 <div class="title">Наша команда</div>
@@ -513,7 +515,7 @@
 
           <!-- exapmle hook action -->
 
-        <?php
+        <!-- <?php
         function print_hello($text, $name) 
         {echo "hello my friend" . $text . ' ' . $name;
         } 
@@ -523,25 +525,25 @@
         // function print_hello_2() 
         // {echo "hello my friend2<br>";} 
         //  add_action('my_hook', 'print_hello', 15); => my_hook -random name, which function to start print_hello... 5, 10, 15 - Priority, where the value is greater will be exucuted later. First 5.. default 10
-        add_action('my_hook', 'print_hello', 10, 2);
+        // add_action('my_hook', 'print_hello', 10, 2);
         // add_action('my_hook', 'print_hello_1', 10);
         // add_action('my_hook', 'print_hello_2', 5);
 // start do action, then will start add_action, which show 'hello my friend'
         // do_action('my_hook');
 
-        do_action('my_hook', 'dear customer', 'Ivan');
+        // do_action('my_hook', 'dear customer', 'Ivan');
 
-        function my_filter_function($str){
-            return 'Hello' . $str;
-           }
+//         function my_filter_function($str){
+//             return 'Hello' . $str;
+//            }
         
-           add_filter('my_filter', 'my_filter_function');
+//            add_filter('my_filter', 'my_filter_function');
         
-           echo apply_filters( 'my_filter', 'World' );
-// from my hook 'my_filter' i removed my_filter_function
-           remove_filter('my_filter', 'my_filter_function');
-// here we willshoe just 'World'
-           echo apply_filters( 'my_filter', 'World' );
+//            echo apply_filters( 'my_filter', 'World' );
+// // from my hook 'my_filter' i removed my_filter_function
+//            remove_filter('my_filter', 'my_filter_function');
+// // here we willshoe just 'World'
+//            echo apply_filters( 'my_filter', 'World' );
 
         //    -------------------- filter what we will use
 
@@ -567,11 +569,9 @@
 //         }
         
 
-        ?>
 
-        <!-- ---------------------------------------------------------------------------------------- -->
-     <!-- exapmle hook filter -->
-     
+?>
+     -->
 
  
 
