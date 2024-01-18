@@ -150,8 +150,8 @@
                             </div>
                             <div class="footer__contacts-item">
                                 <img src="<?php echo bloginfo('template_url'); ?>/assets/img/icons/svg/pointer.svg" alt="указатель" class="footer__contacts-logo">
-                                <address>ул. Василисы Кожиной, 1<br>
-                                    Москва, Россия, 121096</address>
+                    
+                                <address><?php the_field('address') ?></address>
                             </div>
                         </div>
                     </div>
