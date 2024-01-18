@@ -74,7 +74,7 @@
                     <div class="col-md-10 offset-md-1 col-lg-5 offset-lg-1">
                         <div class="about__img">
                             <!-- <img src="<?php echo bloginfo('template_url'); ?>/assets/img/about.jpg" alt="про компанию"> -->
-                            <img src="<?php the_field('about_img'); ?>" alt="про компанию">
+                            <img src="<?php the_field('about_img'); ?>" alt="about_img">
                         </div>
                     </div>
                     <div class="col-md-10 offset-md-1 offset-lg-0 col-lg-6 col-xl-5 offset-xl-1">
@@ -94,10 +94,10 @@
 
         <div class="specialists" id="specialists">
             <div class="container">
-                <div class="title">Наша команда</div>
+                <div class="title"><?php the_field('team_title'); ?></div>
                 <div class="row">
                     <div class="col-lg-10 offset-lg-1">
-                        <img class="specialists__img" src="<?php echo bloginfo('template_url'); ?>/assets/img/team.jpg" alt="наша команда">
+                        <img class="specialists__img" src="<?php the_field('team_img'); ?>" alt="наша команда">
                     </div>
                 </div>
             </div>
@@ -203,7 +203,7 @@
        
         <div class="aboutus" id="aboutus">
             <div class="container">
-                <h1 class="title">Наша история</h1>
+                <h1 class="title"><?php the_field('main_title'); ?></h1>
                 <div class="row">
                     <div class="col-lg-6">
                         <div class="subtitle">
@@ -217,22 +217,24 @@
                         </div>
                     </div>
                     <div class="col-lg-6">
-                        <img class="aboutus__img" src="<?php the_field('all_started_img'); ?>" alt="мир детства">
+                        <img class="aboutus__img" src="<?php the_field('all_started_img'); ?>" alt="first_img">
                     </div>
                 </div>
 
                 <div class="row">
                     <div class="col-lg-6">
-                        <img class="aboutus__img" src="<?php echo bloginfo('template_url'); ?>/assets/img/about_2.jpg" alt="мир детства">
+                        <!-- <img class="aboutus__img" src="<?php echo bloginfo('template_url'); ?>/assets/img/about_2.jpg" alt="мир детства"> -->
+                        <img class="aboutus__img" src="<?php the_field('second_img'); ?>" alt="second_img">
                     </div>
                     <div class="col-lg-6">
                         <div class="subtitle">
-                            Главное - качество
+                        <?php the_field('second_title'); ?>
                         </div>
                         <div class="aboutus__text">
-                            Мы делали их вручную, из лучших материалов и не жалея времени. Но мы росли и наш ассортимент расширился и фабричными изделиями.
+                        <?php the_field('second_descr'); ?>
+                            <!-- Мы делали их вручную, из лучших материалов и не жалея времени. Но мы росли и наш ассортимент расширился и фабричными изделиями.
                             <br><br>
-                            Выбирая нас, вы можете быть уверены, что мы всегда следим за качеством закупок и никогда не предоставим вам опасный или некачественный товар.
+                            Выбирая нас, вы можете быть уверены, что мы всегда следим за качеством закупок и никогда не предоставим вам опасный или некачественный товар. -->
                         </div>
                     </div>
                 </div>
@@ -240,16 +242,17 @@
                 <div class="row">
                     <div class="col-lg-6">
                         <div class="subtitle">
-                            Современные технологии
+                        <?php the_field('third_title'); ?>
                         </div>
                         <div class="aboutus__text">
-                            И даже спустя столько лет мы продолжаем создавать игрушки вручную. Как самые простые, так и те, что идут в ногу со временем. Добавляя электроники и оживляя лучших друзей ребятишек, мы всегда следим за качеством и безопасностью. Каждая отдельная игрушка проходит индивидуальный контроль по всем необходимым стандартам.
+                        <?php the_field('third_descr'); ?>
+                            <!-- И даже спустя столько лет мы продолжаем создавать игрушки вручную. Как самые простые, так и те, что идут в ногу со временем. Добавляя электроники и оживляя лучших друзей ребятишек, мы всегда следим за качеством и безопасностью. Каждая отдельная игрушка проходит индивидуальный контроль по всем необходимым стандартам.
                             <br><br>
-                            Ведь счастливое лицо ребенка - это лучшая награда для нас!
+                            Ведь счастливое лицо ребенка - это лучшая награда для нас! -->
                         </div>
                     </div>
                     <div class="col-lg-6">
-                        <img class="aboutus__img" src="<?php echo bloginfo('template_url'); ?>/assets/img/about_3.jpg" alt="мир детства">
+                        <img class="aboutus__img" src="<?php the_field('third_img'); ?>" alt="мир детства">
                     </div>
                 </div>
             </div>
