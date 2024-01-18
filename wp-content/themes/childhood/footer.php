@@ -118,7 +118,7 @@
                     <div class="col-md-4 col-lg-3">
                         <div class="footer__social">
                             <div class="footer__social-item">
-                                Мы в соцсетях:
+                            We are in social networks:
                             </div>
                             <a href="<?php the_field('instagram_link') ?>" class="footer__social-item">
                                 <svg width="23" height="23" viewBox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg">

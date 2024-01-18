@@ -105,7 +105,7 @@
 
         <div class="toys" id="toys">
             <div class="container">
-                <h2 class="subtitle">Мягкие игрушки</h2>
+                <h2 class="subtitle">STUFFED TOYS</h2>
                 <div class="toys__wrapper">
                     <div class="toys__item" style="background-image: url(<?php echo bloginfo('template_url'); ?>/assets/img/toy_1.jpg)">
                         <div class="toys__item-info">
@@ -166,7 +166,7 @@
                 </div>
 
 
-                <h2 class="subtitle">Развивающие игрушки</h2>
+                <h2 class="subtitle"><?php the_field('title_educational_toys') ?></h2>
                 <div class="toys__wrapper">
 
                     <div class="toys__item" style="background-image: url(<?php echo bloginfo('template_url'); ?>/assets/img/toy_7.jpg)">
@@ -193,7 +193,7 @@
                 <div class="row">
                     <div class="col-lg-10 offset-lg-1">
                         <div class="toys__alert">
-                            <span>Не нашли то, что искали?</span> Свяжитесь с нами - и мы с радостью создадим любую игрушку по вашему желанию. Вы можете выбрать все: размер, материал, формы...!
+                            <span>Have you find what you were looking for?</span> <?php the_field('education_toys_descr') ?>
                         </div>
                     </div>
                 </div>
@@ -277,7 +277,7 @@
                 </div>
                 <div class="row">
                     <div class="col-md-6">
-                        <div class="title contacts__minititle">Свяжитесь с нами</div>
+                        <div class="title contacts__minititle">Contact us</div>
                         <div class="contacts__info">
                             <div class="contacts__phones">
                                 <div class="contacts__phoneblock">
@@ -382,14 +382,14 @@
                                 </div>
                             </div>
                             <div class="contacts__mail">
-                                Или напишите нам на почту
+                            Or contact us by email
                            
                                 <a href="mailto:<?php the_field('mail', 2); ?>"><?php the_field('mail', 2); ?></a>
                             </div>
                         </div>
                     </div>
                     <div class="col-md-6">
-                        <div class="title contacts__minititle">Оставьте ваш отзыв</div>
+                        <div class="title contacts__minititle">Leave your review</div>
                         <form action="#" class="contacts__feed">
                             <label for="feedname">
                                 Ваше имя <span>*</span>
@@ -475,7 +475,7 @@
                 </div>
                 <div class="row mt70">
                     <div class="col-lg-8 offset-lg-2">
-                        <div class="title">отзывы</div>
+                        <div class="title">Reviews</div>
                         <div class="feedslider glide">
                             <div class="glide__track" data-glide-el="track">
                                 <ul class="glide__slides">
