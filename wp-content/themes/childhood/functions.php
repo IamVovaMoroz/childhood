@@ -23,5 +23,7 @@ wp_enqueue_script('childhood_scripts', get_template_directory_uri() . "/assets/j
  };
 // for custom logo
  add_theme_support( 'custom-logo' );
+// add post image(изображение записи)
+ add_theme_support( 'post-thumbnails' );
 
 ?>
