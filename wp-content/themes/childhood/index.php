@@ -197,7 +197,7 @@ global $post;
                                         <?php  the_field('toys_descr');  ?>
                                 <!-- Классика. Должен быть у каждого ребенка!                             -->
                             </div>
-                            <div class="minibutton toys__trigger">Подробнее</div>
+                            <div class="minibutton toys__trigger">Read more</div>
                         </div>
                     </div>
 
@@ -275,7 +275,60 @@ wp_reset_postdata(); // сброс
                 <h2 class="subtitle"><?php the_field('title_educational_toys') ?></h2>
                 <div class="toys__wrapper">
 
-                    <div class="toys__item" style="background-image: url(<?php echo bloginfo('template_url'); ?>/assets/img/toy_7.jpg)">
+                <?php  
+// параметры по умолчанию , numberposts - for show all posts
+$my_posts = get_posts( array(
+	'numberposts' => -1,
+	'category_name'    => 'edu_toys',
+	'orderby'     => 'date',
+    // ASC обратный порядок вывода постов
+	'order'       => 'ASC',
+	'post_type'   => 'post',
+	'suppress_filters' => true, // подавление работы фильтров изменения SQL запроса
+) );
+
+global $post;
+
+               foreach( $my_posts as $post ){
+	           setup_postdata( $post );
+
+
+
+
+// тут ниже  разрываем код php для вывода markup. Тут подставляется верстка
+    ?>
+
+
+                       <!-- <div class="toys__item" style="background-image: url(<?php echo bloginfo('template_url'); ?>/assets/img/toy_1.jpg)"> -->
+                       <!-- add image from card toys -->
+                       <div class="toys__item" style="background-image: url(<?php 
+                    //    put a blank if you don't post the picture, проверяет установлена ли превью
+                       if(has_post_thumbnail()){
+                        // add url of the image 
+                        the_post_thumbnail_url();
+                       } else {
+                     echo get_template_directory_uri() . '/assets/img/not-found.jpg';
+                       }
+                       ?>">
+                        <div class="toys__item-info">
+                            <div class="toys__item-title"><?php the_title(); ?></div>
+                            <div class="toys__item-descr">
+                                        <?php  the_field('toys_descr');  ?>
+                                <!-- Классика. Должен быть у каждого ребенка!                             -->
+                            </div>
+                            <div class="minibutton toys__trigger">Read more</div>
+                        </div>
+                    </div>
+
+
+<?php 
+}
+
+wp_reset_postdata(); // сброс
+?>
+
+
+                    <!-- <div class="toys__item" style="background-image: url(<?php echo bloginfo('template_url'); ?>/assets/img/toy_7.jpg)">
                         <div class="toys__item-info">
                             <div class="toys__item-title">Воздушный змей</div>
                             <div class="toys__item-descr">
@@ -283,9 +336,9 @@ wp_reset_postdata(); // сброс
                             </div>
                             <div class="minibutton toys__trigger">Подробнее</div>
                         </div>
-                    </div>
+                    </div> -->
 
-                    <div class="toys__item" style="background-image: url(<?php echo bloginfo('template_url'); ?>/assets/img/toy_8.jpg)">
+                    <!-- <div class="toys__item" style="background-image: url(<?php echo bloginfo('template_url'); ?>/assets/img/toy_8.jpg)">
                         <div class="toys__item-info">
                             <div class="toys__item-title">Музыкальные</div>
                             <div class="toys__item-descr">
@@ -293,7 +346,7 @@ wp_reset_postdata(); // сброс
                             </div>
                             <div class="minibutton toys__trigger">Подробнее</div>
                         </div>
-                    </div>
+                    </div> -->
 
                 </div>
                 <div class="row">
