@@ -551,15 +551,15 @@ wp_reset_postdata(); // сброс
                         <div class="title contacts__minititle">Leave your review</div>
                         <form action="#" class="contacts__feed">
                             <label for="feedname">
-                                Ваше имя <span>*</span>
+                                Your name <span>*</span>
                             </label>
                             <input required type="text" id="feedname" name="feedname">
 
                             <label for="feedtext">
-                                Ваш отзыв <span>*</span>
+                                Your review <span>*</span>
                             </label>
                             <textarea required name="feedtext" id="feedtext"></textarea>
-                            <button class="minibutton">Отправить</button>
+                            <button class="minibutton">Send</button>
 
                             <svg class="lds-spinner" width="65px"  height="65px"  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 100 100" preserveAspectRatio="xMidYMid" style="background: none;"><g transform="rotate(0 50 50)">
                                     <rect x="47" y="24" rx="9.4" ry="4.8" width="6" height="12" fill="#013476">
@@ -638,7 +638,54 @@ wp_reset_postdata(); // сброс
                         <div class="feedslider glide">
                             <div class="glide__track" data-glide-el="track">
                                 <ul class="glide__slides">
-                                    <li class="glide__slide">
+<!--  -->
+
+ <?php  
+// параметры по умолчанию , numberposts - for show all posts
+$my_posts = get_posts( array(
+	'numberposts' => -1,
+	'category_name'    => 'customer_reviews',
+	'orderby'     => 'date',
+    // ASC обратный порядок вывода постов
+	'order'       => 'ASC',
+	'post_type'   => 'post',
+	'suppress_filters' => true, // подавление работы фильтров изменения SQL запроса
+) );
+
+global $post;
+
+               foreach( $my_posts as $post ){
+	           setup_postdata( $post );
+
+
+
+
+// тут ниже  разрываем код php для вывода markup. Тут подставляется верстка
+    ?>
+
+<li class="glide__slide">
+                                        <div class="feedslider__title">
+                                        <?php  the_field('customer_name');  ?>
+                                        </div>
+                                        <div class="feedslider__text">
+                                        <?php  the_field('review_text');  ?>
+                                            <!-- Спасибо огромное за вежливость и терпение. Обратился к вам только с идеей для подарка, а вы развили её до полноценного проекта! Так что мой сын теперь круглые сутки играет с железной дорогой, построенной по его планам)
+                                            <br><br>
+                                            Отдельное спасибо менеджеру Маргарите за терпение и стойкость! -->
+                                        </div>
+                                    </li>
+
+
+<?php 
+}
+
+wp_reset_postdata(); // сброс
+?>
+
+
+
+<!--  -->
+                                    <!-- <li class="glide__slide">
                                         <div class="feedslider__title">
                                             Иванов Игорь
                                         </div>
@@ -647,23 +694,23 @@ wp_reset_postdata(); // сброс
                                             <br><br>
                                             Отдельное спасибо менеджеру Маргарите за терпение и стойкость!
                                         </div>
-                                    </li>
-                                    <li class="glide__slide">
+                                    </li> -->
+                                    <!-- <li class="glide__slide">
                                         <div class="feedslider__title">
                                             Черкессов Алексей Дмитриевич
                                         </div>
                                         <div class="feedslider__text">
                                             Заказывал у ребят целую партию игрушек для детского сада. Новый год прошел на ура! Теперь все детишки счастливы и не расстаются со своими подарками, а самые хитрые спрашивают когда следующие праздники)
                                         </div>
-                                    </li>
-                                    <li class="glide__slide">
+                                    </li> -->
+                                    <!-- <li class="glide__slide">
                                         <div class="feedslider__title">
                                             Анна Сергеевна
                                         </div>
                                         <div class="feedslider__text">
                                             Решила к дню рождения своей малышки заказать подарки здесь. И ни сколько не жалею! Мишка именно такой, как я хотела, прямо как у меня в детстве: мягкий, приятный на ощупь и оочень милый. Сразу видно, что ручная работа.
                                         </div>
-                                    </li>
+                                    </li> -->
                                 </ul>
                             </div>
 

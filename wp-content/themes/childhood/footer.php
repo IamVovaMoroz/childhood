@@ -1,21 +1,21 @@
 
 <div class="question">
             <div class="question__text">
-                Есть вопросы? Напишите нам!
+            Do you have any questions? Write to us!
             </div>
-            <div id="reply" class="minibutton">Написать</div>
+            <div id="reply" class="minibutton">Write to us</div>
             <div class="question__close">&times</div>
         </div>
         
         <div class="reply">
             <div class="reply__body">
                 <div class="reply__title">
-                    Оставьте ваш вопрос здесь
+                    Leave your question here
                 </div>
                 <form action="#">
                     <div class="reply__wrapper">
                         <div>
-                            <label for="name">Ваше имя <span>*</span></label>
+                            <label for="name">Your name<span>*</span></label>
                             <input name="name" id="name" type="text" required>
                         </div>
                     </div>
@@ -25,13 +25,13 @@
                             <input name="mail" id="mail" type="email">
                         </div>
                         <div>
-                            <label for="phone">Ваш телефон <span>*</span></label>
+                            <label for="phone">Your phone number <span>*</span></label>
                             <input name="phone" id="phone" type="tel" required>
                         </div>
                     </div>
-                    <label for="text">Ваш вопрос <span>*</span></label>
+                    <label for="text">Your qestion <span>*</span></label>
                     <textarea required name="text" id="text"></textarea>
-                    <button class="minibutton">Отправить</button>
+                    <button class="minibutton">Send</button>
                     <svg class="lds-spinner" width="65px"  height="65px"  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 100 100" preserveAspectRatio="xMidYMid" style="background: none;"><g transform="rotate(0 50 50)">
                         <rect x="47" y="24" rx="9.4" ry="4.8" width="6" height="12" fill="#013476">
                           <animate attributeName="opacity" values="1;0" keyTimes="0;1" dur="1s" begin="-0.9166666666666666s" repeatCount="indefinite"></animate>
@@ -158,7 +158,7 @@
                 </div>
                 <div class="row">
                     <div class="col-12">
-                        <a href="#" class="footer__policy">Политика конфиденциальности</a>
+                        <a href="#" class="footer__policy">Privacy Policy</a>
                     </div>
                 </div>
             </div>
