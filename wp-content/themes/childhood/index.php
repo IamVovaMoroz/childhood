@@ -549,7 +549,8 @@ wp_reset_postdata(); // сброс
                     </div>
                     <div class="col-md-6">
                         <div class="title contacts__minititle">Leave your review</div>
-                        <form action="#" class="contacts__feed">
+                        <div class="contacts__feed"><?php echo do_shortcode('[contact-form-7 id="6c24a10" title="Reviews form"]'); ?></div>
+                        <!-- <form action="#" class="contacts__feed">
                             <label for="feedname">
                                 Your name <span>*</span>
                             </label>
@@ -629,7 +630,8 @@ wp_reset_postdata(); // сброс
                                 </style>
                             </svg>
 
-                        </form>
+                        </form> -->
+                        
                     </div>
                 </div>
                 <div class="row mt70">

@@ -1,5 +1,6 @@
 
 <div class="question">
+
             <div class="question__text">
             Do you have any questions? Write to us!
             </div>
@@ -12,7 +13,8 @@
                 <div class="reply__title">
                     Leave your question here
                 </div>
-                <form action="#">
+                <div class="reply__wrapper"><?php echo do_shortcode('[contact-form-7 id="292e577" title="Pop-up form contact us"]'); ?></div>
+                <!-- <form action="#">
                     <div class="reply__wrapper">
                         <div>
                             <label for="name">Your name<span>*</span></label>
@@ -101,7 +103,7 @@
                     </svg>
                     
                     <div class="reply__close">&times</div>
-                </form>
+                </form> -->
             </div>
         </div>
         <footer>
