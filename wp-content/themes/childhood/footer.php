@@ -1,4 +1,4 @@
-
+<!-- footer -->
 <div class="question">
 
             <div class="question__text">
