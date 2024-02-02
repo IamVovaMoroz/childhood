@@ -1,0 +1,11 @@
+version: '3'
+services:
+  my-php-app:
+    image: volodymyrmoroz/my-php-app:latest
+    ports:
+      - "8080:80"
+  db:
+    image: postgres:9.4
+    environment:
+      POSTGRES_USER: "postgres"
+      POSTGRES_PASSWORD: "postgres"
